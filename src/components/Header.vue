@@ -4,7 +4,10 @@
       <div class="container">
         <div class="row justify-content-between">
           <div class="col d-flex align-items-center">
-            <span><i class="fas fa-clock"></i> Open Hours: Mon - Sat - 9.00 - 18.00</span>
+            <span
+              ><i class="fas fa-clock"></i> Open Hours: Mon - Sat - 9.00 -
+              18.00</span
+            >
           </div>
           <div class="col d-flex justify-content-end align-items-center">
             <ul>
@@ -19,18 +22,28 @@
       </div>
     </div>
     <div id="hbot" class="container-fluid">
-      <div class="container py-5">
-        <div class="row justify-content-between">
-            <div class="col-2">
-                <span id="NEX">NEX</span><span>GEN</span>
-            </div>
+      <div id="bg-darkness">
+        <div class="container py-5">
+          <div class="row justify-content-between fs-5 fw-bold">
+            <div class="col-2"><span id="NEX">NEX</span><span>GEN</span></div>
             <div class="col d-flex justify-content-end">
-                <ul>
-                    <li v-for="(link, i) in hLinks" :key="i">{{hLinks[i]}}</li>
-                    <li><i class="far fa-user"></i></li>
-                    <li id="GIT">GET IN TOUCH</li>
-                </ul>
+              <ul>
+                <li v-for="(link, i) in hLinks" :key="i">{{ hLinks[i] }}</li>
+                <li><i class="far fa-user"></i></li>
+                <li id="GIT">GET IN TOUCH</li>
+              </ul>
             </div>
+          </div>
+        </div>
+        <div class="container my-5">
+          <span class="d-block my-10 fc-green">LOGISTICS SERVICES</span>
+          <span class="fs-70 fw-bold">CARGO<br />TRANSPORT</span>
+          <p class="my-4">
+            Fractional exclusive road transportationto all<br />regions, with
+            small, medium and large vehicles
+          </p>
+          <span id="GIT">GET IN TOUCH</span>
+          <span id="RM">READ MORE</span>
         </div>
       </div>
     </div>
@@ -43,7 +56,7 @@ export default {
   data() {
     return {
       hContacts: ["fab fa-facebook-f", "fab fa-twitter", "fab fa-linkedin-in"],
-      hLinks: ['HOME', "ABOUT", "SERVICES", "PROCESS", "TESTIMONIALS"],
+      hLinks: ["HOME", "ABOUT", "SERVICES", "PROCESS", "TESTIMONIALS"],
     };
   },
 };
@@ -51,10 +64,10 @@ export default {
 
 <style scoped lang="scss">
 .header {
-    color: #fff;
+  color: #fff;
 }
 #htop {
-    background-color: #21333e;
+  background-color: #21333e;
 }
 ul {
   list-style: none;
@@ -64,21 +77,40 @@ li {
   padding: 0 20px;
 }
 #hbot {
-    background-image: url(../img/bg-9.jpg);
-    height: 1064px;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(../img/bg-9.jpg);
+  height: 1064px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#bg-darkness {
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  height: 100%;
 }
 #NEX {
-    background-color: #05838369;
-    padding: 10px 0px 10px 20px;
-    color: #00a4a4;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+  background-color: #05838369;
+  padding: 5px 0px 5px 20px;
+  color: #00a4a4;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.my-10{
+    margin: 150px 0 0 0;
+}
+.fc-green {
+    color: #05a1a1
+}
+.fs-70 {
+  font-size: 70px;
 }
 #GIT {
-    background-color: #058283;
-    ruby-span: 15px 10px;
-    border-radius: 3px;
+  background-color: #058283;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+#RM {
+  border: 1px solid #058283;
+  padding: 10px 15px;
+  border-radius: 3px;
+  margin-left: 40px;
 }
 </style>
