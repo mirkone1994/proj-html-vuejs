@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <h1>prova</h1>
+    <Header/>
 
   </div>
 </template>
 
 <script>
-
+import Header from "./components/Header.vue"
 export default {
   name: 'App',
   components: {
-    
+    Header,
   }
 }
 </script>
