@@ -21,5 +21,11 @@ export default {
 <style lang="scss">
 @import "scss/style.scss";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+.mt-10{
+    margin-top: 150px;
+}
+.mb-10{
+    margin-bottom: 150px;
+}
 
 </style>

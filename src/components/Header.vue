@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="container my-5">
-          <span class="d-block my-10 fc-green">LOGISTICS SERVICES</span>
+          <span class="d-block mt-10 fc-green">LOGISTICS SERVICES</span>
           <span class="fs-70 fw-bold">CARGO<br />TRANSPORT</span>
           <p class="my-4">
             Fractional exclusive road transportationto all<br />regions, with
@@ -92,9 +92,6 @@ li {
   color: #00a4a4;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-}
-.my-10{
-    margin: 150px 0 0 0;
 }
 .fc-green {
     color: #05a1a1
