@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="container">
-      <div class="row mt-10 mb-10">
+      <div class="row py-5">
         <div class="col-7">
           <span class="d-block txt-green fw-bold">WHO WE ARE</span>
           <span class="d-block my-3 fs-1 fw-bold"
@@ -152,8 +152,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../scss/style.scss";
 .bg-lightgreen {
-  background-color: #daeced;
+  background-color: $light-green;
 }
 .bg-darkgreen {
     background-color: #0e272d;
@@ -162,10 +163,10 @@ export default {
   padding: 5px;
 }
 .txt-green {
-  color: #058283;
+  color: $dark-green;
 }
 #pBordered {
-  border-left: 4px solid #daeced;
+  border-left: 4px solid $light-green;
 }
 ul {
   padding-left: 15px;
@@ -177,7 +178,7 @@ ul {
   width: 150px;
 }
 #SA {
-  border: 1px solid #058283;
+  border: 1px solid $dark-green;
   padding: 10px 15px;
   border-radius: 3px;
 }

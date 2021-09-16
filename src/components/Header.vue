@@ -63,6 +63,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../scss/style.scss";
+
 .header {
   color: #fff;
 }
@@ -100,12 +102,12 @@ li {
   font-size: 70px;
 }
 #GIT {
-  background-color: #058283;
+  background-color: $dark-green;
   padding: 10px 15px;
   border-radius: 3px;
 }
 #RM {
-  border: 1px solid #058283;
+  border: 1px solid $dark-green;
   padding: 10px 15px;
   border-radius: 3px;
   margin-left: 40px;
