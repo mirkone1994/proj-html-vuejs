@@ -74,14 +74,22 @@
     </div>
     <div class="container-fluid bg-black py-5 text-light">
         <div class="container py-5">
-            <span class="d-block txt-green">ROAD TRANSPORT</span>
-            <h2>Main Services</h2>
+            <span class="d-block txt-green mb-4">ROAD TRANSPORT</span>
+            <h2 class="mb-4 fw-bold">Main <span class="bg-darkgreen p-1">Services</span></h2>
             <div class="row">
-                <div class="col-9">
+                <div class="col-7">
                     <p>With all of this expertise and capability comes an unrivalled commitent to customer service. We will work hard to understand your needs in order to develop a productive, long-term partnership.</p>
                 </div>
-                <div class="col-3">
-                    <span>SEE ALL</span>
+                <div class="col-5 d-flex justify-content-end align-items-center">
+                    <span id="SA">SEE ALL</span>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div v-for="service in services" :key="service.id" class="col-3 services-card">
+                    <i class="fas fa-arrow-right fs-4 txt-green"></i>
+                    <i class="icon fs-5 mt-5 mb-4 px-3 rounded-circle txt-green bg-darkgreen" :class="service.img"></i>
+                    <span class="d-block px-3">{{service.name}}</span>
+                    <p class="my-4 mb-5 px-3">{{service.overview}}</p>
                 </div>
             </div>
         </div>
@@ -118,6 +126,26 @@ export default {
           id: 3,
         },
       ],
+      services: [
+          {
+              img: "fas fa-truck-loading",
+              name: "Technology",
+              overview: "We are continually focused on developing technology solutions adapted to our client's needs.",
+              id: 1
+          },
+          {
+              img: "fas fa-temperature-low",
+              name: "Refer Cargo",
+              overview: "Regular and frequent monitoring from the recipt of the loaded container to final destionation.",
+              id: 2
+          },
+          {
+              img: "fas fa-boxes",
+              name: "Dry Cargo",
+              overview: "We work with most types of dry cargo, from valuable cargo ti the most dangerous requiring care.",
+              id: 3
+          }
+      ]
     };
   },
 };
@@ -126,6 +154,9 @@ export default {
 <style scoped lang="scss">
 .bg-lightgreen {
   background-color: #daeced;
+}
+.bg-darkgreen {
+    background-color: #0e272d;
 }
 #excellence {
   padding: 5px;
@@ -144,5 +175,24 @@ ul {
 }
 .certificate {
   width: 150px;
+}
+#SA {
+  border: 1px solid #058283;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+.services-card {
+    background-color: #19191f;
+    border-radius: 10px;
+    position: relative;
+}
+.icon {
+    padding: 18px;
+    margin-left: 15px;
+}
+.fa-arrow-right {
+    position: absolute;
+    top: 50px;
+    right: 50px;
 }
 </style>
