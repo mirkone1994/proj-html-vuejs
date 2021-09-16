@@ -94,6 +94,19 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid text-center">
+      <span class="d-block">HOW IT WORK IN PRACTICE</span>
+      <h2><span>Logistical</span> Procedure</h2>
+      <p>We work with innovative methodologies to ensure that the entire delivery process is done from <br> start to finish as planned</p>
+    </div>
+    <div class="row justify-content-around">
+      <hr>
+      <div v-for="procedure in procedures" :key="procedure.id" class="col-2 text-center">
+        <span class="d-block">{{procedure.id}}</span>
+        <span class="d-block">{{procedure.name}}</span>
+        <span lockclass="d-b">{{procedure.overview}}</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -145,6 +158,33 @@ export default {
               overview: "We work with most types of dry cargo, from valuable cargo ti the most dangerous requiring care.",
               id: 3
           }
+      ],
+      procedures: [
+        {
+          id: 1,
+          name: "Collection of Information",
+          overview: "Lorem ipsum dolor sit arnet consectetur"
+        },
+        {
+          id: 2,
+          name: "Service Invoice Sending",
+          overview: "Lorem ipsum dolor sit arnet consectetur"
+        },
+        {
+          id: 3,
+          name: "Withdrawal of Cargo",
+          overview: "Lorem ipsum dolor sit arnet consectetur"
+        },
+        {
+          id: 4,
+          name: "Transport Customer Order",
+          overview: "Lorem ipsum dolor sit arnet consectetur"
+        },
+        {
+          id: 5,
+          name: "Successful Delivery",
+          overview: "Lorem ipsum dolor sit arnet consectetur"
+        },
       ]
     };
   },
