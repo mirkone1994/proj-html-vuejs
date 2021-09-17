@@ -117,26 +117,78 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid text-center py-5 pr bg-almostgreen">
-      <span class="d-block txt-green fw-bold my-4">HOW IT WORK IN PRACTICE</span>
-      <h2 class="my-4"><span class="bg-lightgreen txt-green p-1 fw-bold">Logistical</span> Procedure</h2>
+    <div id="mainlogi" class="container-fluid text-center py-5 pr">
+      <span class="d-block txt-green fw-bold my-4"
+        >HOW IT WORK IN PRACTICE</span
+      >
+      <h2 class="my-4">
+        <span class="bg-lightgreen txt-green p-1 fw-bold">Logistical</span>
+        Procedure
+      </h2>
       <p class="my-4">
         We work with innovative methodologies to ensure that the entire delivery
         process is done from <br />
         start to finish as planned
       </p>
-      <hr class="mt-5 nLine" >
-      <div class="row pa justify-content-around w-100 bg-almostgreen">
+      <hr class="mt-5 nLine" />
+      <div class="row pa justify-content-around w-100">
         <div
           v-for="procedure in procedures"
           :key="procedure.id"
           class="mb-5 col-2 logistics-card text-center"
         >
-          <span class="d-block iNumber rounded-circle bg-lightgreen txt-green mb-5">{{ procedure.id }}</span>
+          <span
+            class="d-block iNumber rounded-circle bg-lightgreen txt-green mb-5"
+            >{{ procedure.id }}</span
+          >
           <span class="d-block fs-3 fw-bold mb-5">{{ procedure.name }}</span>
           <span class="d-block mb-5">{{ procedure.overview }}</span>
         </div>
       </div>
+    </div>
+    <div id="mainbg" class="container-fluid text-center text-light">
+      <div class="container">
+        <span class="d-block pt-10 mb-3 txt-green fw-bold"
+          >WHAT ARE WE DOING</span
+        >
+        <h2 class="mb-5 fw-bold">
+          <span class="bg-darkgreen p-1">Results</span> in Numbers
+        </h2>
+        <div class="row justify-content-around">
+          <div
+            v-for="result in results"
+            :key="result.id"
+            class="col-2 mt-5 mb-10"
+          >
+            <span class="d-block txt-green fs-3 fw-bold">{{
+              result.numbers
+            }}</span>
+            <span class="d-block fw-bold">{{ result.type }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-black py-5 text-center text-light">
+      <div class="container py-5">
+        <span class="d-block txt-green fw-bold mb-4">CUSTOMER TESTIMONIALS</span>
+        <h2 class="mb-4 fw-bold">
+          Trusted <span class="bg-darkgreen p-1">Feedback</span>
+        </h2>
+            <p>
+              We work intesively in search of ideals that can add up in the lives of our customers. This is what <br>moves us and we are grateful for the recognition.
+            </p>
+        </div>
+        <div class="row justify-content-evenly">
+          <div
+            v-for="feedback in feedbakcs"
+            :key="feedback.id"
+            class="col-2 services-card text-start mb-5"
+          >
+            <img class="w-50 px-3 pt-4 filtered" :src="feedback.img" alt="">
+            <p class="my-3 px-3">{{ feedback.overview }}</p>
+            <span class="d-block px-3 pb-4">{{ feedback.lorem }}</span>
+          </div>
+        </div>
     </div>
   </div>
 </template>
@@ -220,6 +272,51 @@ export default {
           overview: "Lorem ipsum dolor sit arnet consectetur",
         },
       ],
+      results: [
+        {
+          id: 1,
+          numbers: 128,
+          type: "Certifications",
+        },
+        {
+          id: 2,
+          numbers: 230,
+          type: "Employees",
+        },
+        {
+          id: 3,
+          numbers: 517,
+          type: "Customers",
+        },
+        {
+          id: 4,
+          numbers: 94,
+          type: "Countries Served",
+        },
+      ],
+      feedbakcs: [
+        {
+          img: require("@/img/logo-1.png"),
+          lorem: "Lorem ipsum dolor sit armet, consectetur adipiscing elit.",
+          overview:
+            "Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.",
+          id: 1,
+        },
+        {
+          img: require("@/img/logo-2.png"),
+          lorem: "Lorem ipsum dolor sit armet, consectetur adipiscing elit.",
+          overview:
+            "Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.",
+          id: 2,
+        },
+        {
+          img: require("@/img/logo-3.png"),
+          lorem: "Lorem ipsum dolor sit armet, consectetur adipiscing elit.",
+          overview:
+            "Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.",
+          id: 3,
+        },
+      ],
     };
   },
 };
@@ -227,17 +324,20 @@ export default {
 
 <style scoped lang="scss">
 @import "../scss/style.scss";
+.pt-10 {
+  padding-top: 100px;
+}
 .bg-almostgreen {
   background-color: #eef4ed;
 }
 .pr {
-  position: relative
+  position: relative;
 }
 .pa {
   position: absolute;
   top: 270px;
   left: 50.5%;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 }
 .bg-lightgreen {
   background-color: $light-green;
@@ -248,7 +348,7 @@ export default {
 .txt-green {
   color: $dark-green;
 }
-.txt-lightgreen{
+.txt-lightgreen {
   color: $light-green;
 }
 #pBordered {
@@ -277,9 +377,12 @@ ul {
   padding: 18px;
   margin-left: 15px;
 }
+#mainlogi {
+  height: 600px;
+}
 .nLine {
   border: 2px solid $dark-green;
-  color: $dark-green
+  color: $dark-green;
 }
 .iNumber {
   width: 25px;
@@ -289,5 +392,14 @@ ul {
   position: absolute;
   top: 50px;
   right: 50px;
+}
+#mainbg {
+  background-image: url(../img/bg-10.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.filtered {
+  filter: invert(100%);
 }
 </style>
