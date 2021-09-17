@@ -87,12 +87,12 @@ li {
   font-size: 70px;
 }
 #GIT {
-  background-color: $dark-green;
+  background-color: $green;
   padding: 10px 15px;
   border-radius: 3px;
 }
 #RM {
-  border: 1px solid $dark-green;
+  border: 1px solid $green;
   padding: 10px 15px;
   border-radius: 3px;
   margin-left: 40px;

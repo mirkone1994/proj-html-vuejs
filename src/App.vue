@@ -66,4 +66,7 @@ ul {
 .bg-green {
   background-color: $green;
 }
+.bg-darkblue {
+  background-color: $dark-blue;
+}
 </style>

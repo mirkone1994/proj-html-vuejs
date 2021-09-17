@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div id="fbot" class="container-fluid mt-10 text-light">
+    <div id="fbot" class="bg-darkblue container-fluid mt-10 text-light">
       <div class="container py-5">
         <div class="row justify-content-evenly">
           <div class="col-3">
@@ -143,15 +143,12 @@ li {
   margin-left: -8px;
 }
 #VM {
-  border: 1px solid $dark-green;
+  border: 1px solid $green;
   padding: 10px 15px;
   border-radius: 3px;
 }
-#fbot {
-  background-color: black;
-}
 #GIT {
-  border: 1px solid $dark-green;
+  border: 1px solid $green;
   padding: 10px 15px;
   border-radius: 3px;
 }

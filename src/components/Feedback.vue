@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid bg-black py-5 text-center text-light">
+  <div class="container-fluid bg-darkblue py-5 text-center text-light">
     <div class="container py-5">
       <span class="d-block txt-green fw-bold mb-4">CUSTOMER TESTIMONIALS</span>
       <h2 class="mb-4 fw-bold">
