@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid resetp">
     <div class="container">
       <div class="row py-5">
         <div class="col-7">
@@ -10,24 +10,9 @@
             >
             in Transport</span
           >
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
-            veniam cumque labore iusto deleniti. Sed exercitationem, quo
-            tenetur, reiciendis, deleniti perferendis ex aliquam expedita earum
-            dolor assumenda doloremque quaerat temporibus.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
-            maxime repellat necessitatibus dolorum fuga a eius alias, voluptas
-            veritatis ipsa numquam aut cupiditate, recusandae placeat facere,
-            laboriosam impedit eveniet est?
-          </p>
-          <p id="pBordered" class="fst-italic ps-5">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
-            error odio praesentium provident quia unde molestias est doloremque
-            at in architecto aliquam labore eveniet possimus dignissimos,
-            incidunt repudiandae repellat soluta.
-          </p>
+          <Lorem />
+          <Lorem />
+          <Lorem id="pBordered" class="fst-italic ps-5"></Lorem>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
             excepturi accusamus dicta veritatis vero?
@@ -91,30 +76,7 @@
             <span id="SA">SEE ALL</span>
           </div>
         </div>
-        <div class="row justify-content-between">
-          <div
-            v-for="service in services"
-            :key="service.id"
-            class="col-3 services-card"
-          >
-            <i class="fas fa-arrow-right fs-4 txt-green"></i>
-            <i
-              class="
-                icon
-                fs-5
-                mt-5
-                mb-4
-                px-3
-                rounded-circle
-                txt-green
-                bg-darkgreen
-              "
-              :class="service.img"
-            ></i>
-            <span class="d-block px-3">{{ service.name }}</span>
-            <p class="my-4 mb-5 px-3">{{ service.overview }}</p>
-          </div>
-        </div>
+        <MainServicesCard/>
       </div>
     </div>
     <div id="mainlogi" class="container-fluid text-center py-5 pr">
@@ -168,34 +130,21 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid bg-black py-5 text-center text-light">
-      <div class="container py-5">
-        <span class="d-block txt-green fw-bold mb-4">CUSTOMER TESTIMONIALS</span>
-        <h2 class="mb-4 fw-bold">
-          Trusted <span class="bg-darkgreen p-1">Feedback</span>
-        </h2>
-            <p>
-              We work intesively in search of ideals that can add up in the lives of our customers. This is what <br>moves us and we are grateful for the recognition.
-            </p>
-        </div>
-        <div class="row justify-content-evenly">
-          <div
-            v-for="feedback in feedbakcs"
-            :key="feedback.id"
-            class="col-2 services-card text-start mb-5"
-          >
-            <img class="w-50 px-3 pt-4 filtered" :src="feedback.img" alt="">
-            <p class="my-3 px-3">{{ feedback.overview }}</p>
-            <span class="d-block px-3 pb-4">{{ feedback.lorem }}</span>
-          </div>
-        </div>
-    </div>
+    <Feedback/>
   </div>
 </template>
 
 <script>
+import Lorem from "./Lorem.vue";
+import MainServicesCard from "./MainServicesCard.vue"
+import Feedback from "./Feedback.vue"
 export default {
   name: "Main",
+  components: {
+    Lorem,
+    MainServicesCard,
+    Feedback,
+  },
   data() {
     return {
       lorems: [
@@ -222,29 +171,7 @@ export default {
           id: 3,
         },
       ],
-      services: [
-        {
-          img: "fas fa-truck-loading",
-          name: "Technology",
-          overview:
-            "We are continually focused on developing technology solutions adapted to our client's needs.",
-          id: 1,
-        },
-        {
-          img: "fas fa-temperature-low",
-          name: "Refer Cargo",
-          overview:
-            "Regular and frequent monitoring from the recipt of the loaded container to final destionation.",
-          id: 2,
-        },
-        {
-          img: "fas fa-boxes",
-          name: "Dry Cargo",
-          overview:
-            "We work with most types of dry cargo, from valuable cargo ti the most dangerous requiring care.",
-          id: 3,
-        },
-      ],
+      
       procedures: [
         {
           id: 1,
@@ -294,29 +221,6 @@ export default {
           type: "Countries Served",
         },
       ],
-      feedbakcs: [
-        {
-          img: require("@/img/logo-1.png"),
-          lorem: "Lorem ipsum dolor sit armet, consectetur adipiscing elit.",
-          overview:
-            "Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.",
-          id: 1,
-        },
-        {
-          img: require("@/img/logo-2.png"),
-          lorem: "Lorem ipsum dolor sit armet, consectetur adipiscing elit.",
-          overview:
-            "Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.",
-          id: 2,
-        },
-        {
-          img: require("@/img/logo-3.png"),
-          lorem: "Lorem ipsum dolor sit armet, consectetur adipiscing elit.",
-          overview:
-            "Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.",
-          id: 3,
-        },
-      ],
     };
   },
 };
@@ -324,17 +228,29 @@ export default {
 
 <style scoped lang="scss">
 @import "../scss/style.scss";
+//position
+.resetp {
+  padding-right: 0;
+  padding-left: 0;
+}
 .pa {
   position: absolute;
   top: 270px;
   left: 50.5%;
   transform: translateX(-50%);
 }
-#pBordered {
-  border-left: 4px solid $light-green;
-}
 ul {
   padding-left: 15px;
+}
+
+.iNumber {
+  width: 25px;
+  margin: auto;
+}
+
+//style
+#pBordered {
+  border-left: 4px solid $light-green;
 }
 .truck {
   width: 100px;
@@ -347,15 +263,7 @@ ul {
   padding: 10px 15px;
   border-radius: 3px;
 }
-.services-card {
-  background-color: #19191f;
-  border-radius: 10px;
-  position: relative;
-}
-.icon {
-  padding: 18px;
-  margin-left: 15px;
-}
+
 #mainlogi {
   height: 600px;
 }
@@ -363,22 +271,10 @@ ul {
   border: 2px solid $dark-green;
   color: $dark-green;
 }
-.iNumber {
-  width: 25px;
-  margin: auto;
-}
-.fa-arrow-right {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-}
 #mainbg {
   background-image: url(../img/bg-10.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-.filtered {
-  filter: invert(100%);
 }
 </style>

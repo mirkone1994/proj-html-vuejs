@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header text-light">
     <div id="htop" class="container-fluid">
       <div class="container">
         <div class="row justify-content-between">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div id="hbot" class="container-fluid">
+    <div id="hbot" class="container-fluid resetp">
       <div id="bg-darkness">
         <div class="container py-5">
           <div class="row justify-content-between fs-5 fw-bold">
@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="container my-5">
-          <span class="d-block mt-10 fc-green">LOGISTICS SERVICES</span>
+          <span class="d-block mt-10 txt-green">LOGISTICS SERVICES</span>
           <span class="fs-70 fw-bold">CARGO<br />TRANSPORT</span>
           <p class="my-4">
             Fractional exclusive road transportationto all<br />regions, with
@@ -64,15 +64,8 @@ export default {
 
 <style scoped lang="scss">
 @import "../scss/style.scss";
-
-.header {
-  color: #fff;
-}
 #htop {
   background-color: #21333e;
-}
-ul {
-  list-style: none;
 }
 li {
   display: inline;
@@ -83,20 +76,12 @@ li {
   height: 1064px;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-right: 0;
+  padding-left: 0;
 }
 #bg-darkness {
   background-color: rgba($color: #000000, $alpha: 0.5);
   height: 100%;
-}
-#NEX {
-  background-color: #05838369;
-  padding: 5px 0px 5px 20px;
-  color: #00a4a4;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-}
-.fc-green {
-    color: #05a1a1
 }
 .fs-70 {
   font-size: 70px;

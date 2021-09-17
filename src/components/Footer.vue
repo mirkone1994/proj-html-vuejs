@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid resetp">
     <div id="ftop" class="container mt-10 mb-10">
       <div class="row">
         <div class="col-7">
@@ -50,7 +50,11 @@
             </ul>
             <span id="GIT">GET IN TOUCH</span>
           </div>
-          <div v-for="title in titles" :key="title.id" class="col-2 py-4 links-card">
+          <div
+            v-for="title in titles"
+            :key="title.id"
+            class="col-2 py-4 links-card"
+          >
             <span class="fs-3 ps-4 fw-bold">{{ title.title }}</span>
             <ul class="mt-2">
               <li id="links" class="my-1" v-for="link in links" :key="link">
@@ -60,14 +64,15 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="hend row bg-black text-light justify-content-evenly">
+      <div class="hend row bg-black text-light justify-content-evenly">
         <div class="col-4 text-center">
-            Enjoy the low price. We are tracking any intention of piracy.
+          Enjoy the low price. We are tracking any intention of piracy.
         </div>
         <div class="col-4 text-center">
-            2020 NEXGEN is Proudly Powered by <span class="txt-green">Codings</span>.
+          2020 NEXGEN is Proudly Powered by
+          <span class="txt-green">Codings</span>.
         </div>
+      </div>
     </div>
   </div>
 </template>
@@ -127,26 +132,20 @@ export default {
 
 <style scoped lang="scss">
 @import "../scss/style.scss";
-ul {
-  list-style: none;
+.resetp {
+  padding-right: 0;
+  padding-left: 0;
 }
 li {
   margin-left: -30px;
 }
 #links {
-    margin-left: -8px;
+  margin-left: -8px;
 }
 #VM {
   border: 1px solid $dark-green;
   padding: 10px 15px;
   border-radius: 3px;
-}
-#NEX {
-  background-color: #05838369;
-  padding: 5px 0px 5px 20px;
-  color: #00a4a4;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
 }
 #fbot {
   background-color: black;
@@ -157,10 +156,10 @@ li {
   border-radius: 3px;
 }
 .links-card {
-    background-color: #19191f;
-    border-radius: 15px;
+  background-color: #19191f;
+  border-radius: 15px;
 }
 .hend {
-    font-size: 0.75em;
+  font-size: 0.75em;
 }
 </style>
