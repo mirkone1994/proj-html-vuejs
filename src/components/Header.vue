@@ -1,6 +1,6 @@
 <template>
   <div class="header text-light">
-    <div id="htop" class="container-fluid">
+    <div id="htop" class="container-fluid txt-silver">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col d-flex align-items-center">
@@ -9,7 +9,7 @@
               18.00</span
             >
           </div>
-          <div class="col d-flex justify-content-end align-items-center">
+          <div class="col d-flex justify-content-end mt-2 align-items-center">
             <ul>
               <li><i class="fas fa-phone-alt"> +1 (305) 1234-5678</i></li>
               <li><i class="fas fa-envelope"> hello@example.com</i></li>
@@ -25,7 +25,7 @@
       <div id="bg-darkness">
         <div class="container py-5">
           <div class="row justify-content-between fs-5 fw-bold">
-            <div class="col-2"><span id="NEX">NEX</span><span>GEN</span></div>
+            <div class="col-2"><span id="NEX">NEX</span><span> GEN</span></div>
             <div class="col d-flex justify-content-end">
               <ul>
                 <li v-for="(link, i) in hLinks" :key="i">{{ hLinks[i] }}</li>
@@ -36,9 +36,11 @@
           </div>
         </div>
         <div class="container my-5">
-          <span class="d-block mt-10 txt-green">LOGISTICS SERVICES</span>
+          <span class="d-block fw-bold mt-10 txt-green"
+            >LOGISTICS SERVICES</span
+          >
           <span class="fs-70 fw-bold">CARGO<br />TRANSPORT</span>
-          <p class="my-4">
+          <p class="my-4 txt-silver">
             Fractional exclusive road transportationto all<br />regions, with
             small, medium and large vehicles
           </p>

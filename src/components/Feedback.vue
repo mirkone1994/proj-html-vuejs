@@ -5,7 +5,7 @@
       <h2 class="mb-4 fw-bold">
         Trusted <span class="bg-darkgreen p-1">Feedback</span>
       </h2>
-      <p>
+      <p class="txt-silver">
         We work intesively in search of ideals that can add up in the lives of
         our customers. This is what <br />moves us and we are grateful for the
         recognition.
@@ -17,9 +17,10 @@
         :key="feedback.id"
         class="col-2 services-card text-start mb-5"
       >
+        <i class="fas fa-quote-right fs-4"></i>
         <img class="w-50 px-3 pt-4 filtered" :src="feedback.img" alt="" />
-        <p class="my-3 px-3">{{ feedback.overview }}</p>
-        <span class="d-block px-3 pb-4">{{ feedback.lorem }}</span>
+        <p class="my-3 px-3 txt-silver">{{ feedback.overview }}</p>
+        <span class="d-block px-3 pb-4 txt-silver">{{ feedback.lorem }}</span>
       </div>
     </div>
   </div>
@@ -61,5 +62,10 @@ export default {
 <style>
 .filtered {
   filter: invert(100%);
+}
+.fa-quote-right {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
 }
 </style>

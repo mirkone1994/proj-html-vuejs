@@ -1,36 +1,27 @@
 <template>
   <div class="row justify-content-between">
-          <div
-            v-for="service in services"
-            :key="service.id"
-            class="col-3 services-card"
-          >
-            <i class="fas fa-arrow-right fs-4 txt-green"></i>
-            <i
-              class="
-                icon
-                fs-5
-                mt-5
-                mb-4
-                px-3
-                rounded-circle
-                txt-green
-                bg-darkgreen
-              "
-              :class="service.img"
-            ></i>
-            <span class="d-block px-3">{{ service.name }}</span>
-            <p class="my-4 mb-5 px-3">{{ service.overview }}</p>
-          </div>
-        </div>
+    <div
+      v-for="service in services"
+      :key="service.id"
+      class="col-3 services-card"
+    >
+      <i class="fas fa-arrow-right fs-4 txt-green"></i>
+      <i
+        class="icon fs-5 mt-5 mb-4 px-3 rounded-circle txt-green bg-darkgreen"
+        :class="service.img"
+      ></i>
+      <span class="d-block fs-4 fw-bold px-3">{{ service.name }}</span>
+      <p class="my-4 mb-5 px-3 txt-silver">{{ service.overview }}</p>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name: "MainServicesCard",
-    data(){
-      return {
-        services: [
+  name: "MainServicesCard",
+  data() {
+    return {
+      services: [
         {
           img: "fas fa-truck-loading",
           name: "Technology",
@@ -40,7 +31,7 @@ export default {
         },
         {
           img: "fas fa-temperature-low",
-          name: "Refer Cargo",
+          name: "Reefer Cargo",
           overview:
             "Regular and frequent monitoring from the recipt of the loaded container to final destionation.",
           id: 2,
@@ -53,10 +44,9 @@ export default {
           id: 3,
         },
       ],
-      }
-    }
-
-}
+    };
+  },
+};
 </script>
 
 <style>
@@ -74,5 +64,4 @@ export default {
   border-radius: 10px;
   position: relative;
 }
-
 </style>

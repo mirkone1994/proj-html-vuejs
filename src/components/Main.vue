@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid resetp">
-    <div class="container">
+    <div class="container mt-10 mb-10">
       <div class="row py-5">
         <div class="col-7">
           <span class="d-block txt-green fw-bold">WHO WE ARE</span>
@@ -18,7 +18,9 @@
             excepturi accusamus dicta veritatis vero?
           </p>
           <ul>
-            <li v-for="(lorem, i) in lorems" :key="i">{{ lorems[i] }}</li>
+            <li class="listyle" v-for="(lorem, i) in lorems" :key="i">
+              {{ lorems[i] }}
+            </li>
           </ul>
         </div>
         <div class="col-5">
@@ -59,13 +61,13 @@
     </div>
     <div class="container-fluid bg-darkblue py-5 text-light">
       <div class="container py-5">
-        <span class="d-block txt-green mb-4">ROAD TRANSPORT</span>
+        <span class="d-block fw-bold txt-green mb-4">ROAD TRANSPORT</span>
         <h2 class="mb-4 fw-bold">
           Main <span class="bg-darkgreen p-1">Services</span>
         </h2>
         <div class="row">
           <div class="col-7">
-            <p>
+            <p class="txt-silver">
               With all of this expertise and capability comes an unrivalled
               commitent to customer service. We will work hard to understand
               your needs in order to develop a productive, long-term
@@ -76,14 +78,14 @@
             <span id="SA">SEE ALL</span>
           </div>
         </div>
-        <MainServicesCard/>
+        <MainServicesCard />
       </div>
     </div>
     <div id="mainlogi" class="container-fluid text-center py-5 pr">
       <span class="d-block txt-green fw-bold my-4"
         >HOW IT WORK IN PRACTICE</span
       >
-      <h2 class="my-4">
+      <h2 class="my-4 fw-bold">
         <span class="bg-lightgreen txt-green p-1 fw-bold">Logistical</span>
         Procedure
       </h2>
@@ -101,7 +103,7 @@
         >
           <span
             class="d-block iNumber rounded-circle bg-lightgreen txt-green mb-5"
-            >{{ procedure.id }}</span
+            >0{{ procedure.id }}</span
           >
           <span class="d-block fs-3 fw-bold mb-5">{{ procedure.name }}</span>
           <span class="d-block mb-5">{{ procedure.overview }}</span>
@@ -130,14 +132,14 @@
         </div>
       </div>
     </div>
-    <Feedback/>
+    <Feedback />
   </div>
 </template>
 
 <script>
 import Lorem from "./Lorem.vue";
-import MainServicesCard from "./MainServicesCard.vue"
-import Feedback from "./Feedback.vue"
+import MainServicesCard from "./MainServicesCard.vue";
+import Feedback from "./Feedback.vue";
 export default {
   name: "Main",
   components: {
@@ -171,7 +173,7 @@ export default {
           id: 3,
         },
       ],
-      
+
       procedures: [
         {
           id: 1,
@@ -242,13 +244,15 @@ export default {
 ul {
   padding-left: 15px;
 }
-
 .iNumber {
   width: 25px;
   margin: auto;
 }
 
 //style
+.listyle {
+  list-style: disc;
+}
 #pBordered {
   border-left: 4px solid $light-green;
 }
@@ -259,7 +263,7 @@ ul {
   width: 150px;
 }
 #SA {
-  border: 1px solid $dark-green;
+  border: 1px solid $green;
   padding: 10px 15px;
   border-radius: 3px;
 }

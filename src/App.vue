@@ -48,6 +48,9 @@ ul {
   border-bottom-left-radius: 30px;
 }
 //colors
+.txt-silver {
+  color: $silver-sand;
+}
 .bg-almostgreen {
   background-color: $almost-green;
 }

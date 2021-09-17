@@ -15,10 +15,12 @@
         <div class="col-5">
           <h3 class="fw-bold">Example Inc.</h3>
           <p class="mt-5">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem
+            ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
           <p class="mb-5">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem
+            ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
           <ul>
             <li class="my-4" v-for="contact in contacts" :key="contact.id">
@@ -33,19 +35,19 @@
         </div>
       </div>
     </div>
-    <div id="fbot" class="bg-darkblue container-fluid mt-10 text-light">
+    <div id="fbot" class="bg-darkblue container-fluid text-light">
       <div class="container py-5">
         <div class="row justify-content-evenly">
           <div class="col-3">
             <span class="fs-3 fw-bold"><span id="NEX">NEX</span> GEN</span>
-            <p class="mt-4">
+            <p class="mt-4 txt-silver">
               A functional HTML Template <br />
               for Corporate & Business
             </p>
             <ul>
               <li class="my-4" v-for="contact in contacts" :key="contact.id">
                 <i class="" :class="contact.img"></i
-                ><span class=""> {{ contact.contact }}</span>
+                ><span class="txt-silver"> {{ contact.contact }}</span>
               </li>
             </ul>
             <span id="GIT">GET IN TOUCH</span>
@@ -57,20 +59,40 @@
           >
             <span class="fs-3 ps-4 fw-bold">{{ title.title }}</span>
             <ul class="mt-2">
-              <li id="links" class="my-1" v-for="link in links" :key="link">
+              <li
+                id="links"
+                class="my-1 txt-silver"
+                v-for="link in links"
+                :key="link"
+              >
                 <i class="fas fa-chevron-right"></i> {{ link }}
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="hend row bg-black text-light justify-content-evenly">
-        <div class="col-4 text-center">
+      <div
+        class="
+          hend
+          row
+          bg-black
+          text-light
+          align-items-center
+          justify-content-between
+        "
+      >
+        <div class="col-1 offset-1"></div>
+        <div class="col-4 text-center txt-silver">
           Enjoy the low price. We are tracking any intention of piracy.
         </div>
-        <div class="col-4 text-center">
+        <div class="col-4 text-center txt-silver">
           2020 NEXGEN is Proudly Powered by
           <span class="txt-green">Codings</span>.
+        </div>
+        <div class="col-1">
+          <a id="scrolltop" href="top"
+            ><i class="fas fa-arrow-alt-circle-up fa-2x"></i
+          ></a>
         </div>
       </div>
     </div>
@@ -158,5 +180,9 @@ li {
 }
 .hend {
   font-size: 0.75em;
+  height: 50px;
+}
+#scrolltop {
+  color: grey;
 }
 </style>
