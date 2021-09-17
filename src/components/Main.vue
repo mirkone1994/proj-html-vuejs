@@ -324,32 +324,11 @@ export default {
 
 <style scoped lang="scss">
 @import "../scss/style.scss";
-.pt-10 {
-  padding-top: 100px;
-}
-.bg-almostgreen {
-  background-color: #eef4ed;
-}
-.pr {
-  position: relative;
-}
 .pa {
   position: absolute;
   top: 270px;
   left: 50.5%;
   transform: translateX(-50%);
-}
-.bg-lightgreen {
-  background-color: $light-green;
-}
-.bg-darkgreen {
-  background-color: #0e272d;
-}
-.txt-green {
-  color: $dark-green;
-}
-.txt-lightgreen {
-  color: $light-green;
 }
 #pBordered {
   border-left: 4px solid $light-green;

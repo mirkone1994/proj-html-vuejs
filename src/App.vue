@@ -3,7 +3,6 @@
     <Header/>
     <Main/>
     <Footer/>
-
   </div>
 </template>
 
@@ -29,6 +28,30 @@ export default {
 }
 .mb-10{
     margin-bottom: 150px;
+}
+.pt-10 {
+  padding-top: 100px;
+}
+.pr {
+  position: relative;
+}
+.bg-almostgreen {
+  background-color: #eef4ed;
+}
+.txt-lightgreen {
+  color: $light-green;
+}
+.bg-lightgreen {
+  background-color: $light-green;
+}
+.bg-darkgreen {
+  background-color: #0e272d;
+}
+.txt-green {
+  color: $dark-green;
+}
+.bg-green {
+  background-color: $dark-green;
 }
 
 </style>
