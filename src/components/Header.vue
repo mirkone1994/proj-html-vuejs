@@ -11,10 +11,18 @@
           </div>
           <div class="col d-flex justify-content-end mt-2 align-items-center">
             <ul>
-              <li><i class="fas fa-phone-alt"> +1 (305) 1234-5678</i></li>
-              <li><i class="fas fa-envelope"> hello@example.com</i></li>
+              <li>
+                <i class="fas fa-phone-alt"
+                  ><a class="text-light" href=""> +1 (305) 1234-5678</a>
+                </i>
+              </li>
+              <li>
+                <i class="fas fa-envelope"
+                  ><a class="text-light" href=""> hello@example.com</a></i
+                >
+              </li>
               <li v-for="(contact, i) in hContacts" :key="i">
-                <i :class="hContacts[i]"></i>
+                <a class="text-light" href=""><i :class="hContacts[i]"></i></a>
               </li>
             </ul>
           </div>
@@ -28,9 +36,11 @@
             <div class="col-2"><span id="NEX">NEX</span><span> GEN</span></div>
             <div class="col d-flex justify-content-end">
               <ul>
-                <li v-for="(link, i) in hLinks" :key="i">{{ hLinks[i] }}</li>
+                <li v-for="(link, i) in hLinks" :key="i">
+                  <a class="text-light" href="">{{ hLinks[i] }}</a>
+                </li>
                 <li><i class="far fa-user"></i></li>
-                <li id="GIT">GET IN TOUCH</li>
+                <li id="GIT"><a class="text-light" href="">GET IN TOUCH</a></li>
               </ul>
             </div>
           </div>
@@ -44,8 +54,8 @@
             Fractional exclusive road transportationto all<br />regions, with
             small, medium and large vehicles
           </p>
-          <span id="GIT">GET IN TOUCH</span>
-          <span id="RM">READ MORE</span>
+          <span id="GIT"><a class="text-light" href="">GET IN TOUCH</a> </span>
+          <span id="RM"><a class="text-light" href="">READ MORE</a></span>
         </div>
       </div>
     </div>
@@ -66,6 +76,9 @@ export default {
 
 <style scoped lang="scss">
 @import "../scss/style.scss";
+a {
+  text-decoration: none;
+}
 #htop {
   background-color: #21333e;
 }

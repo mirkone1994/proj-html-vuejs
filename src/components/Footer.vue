@@ -28,10 +28,12 @@
                 class="rounded-circle txt-green bg-lightgreen p-3"
                 :class="contact.img"
               ></i
-              ><span class="txt-green"> {{ contact.contact }}</span>
+              ><a href=""
+                ><span class="txt-green"> {{ contact.contact }}</span></a
+              >
             </li>
           </ul>
-          <span id="VM" class="txt-green mt-5">VIEW MAP</span>
+          <a href=""><span id="VM" class="txt-green mt-5">VIEW MAP</span></a>
         </div>
       </div>
     </div>
@@ -47,10 +49,12 @@
             <ul>
               <li class="my-4" v-for="contact in contacts" :key="contact.id">
                 <i class="" :class="contact.img"></i
-                ><span class="txt-silver"> {{ contact.contact }}</span>
+                ><a href=""
+                  ><span class="txt-silver"> {{ contact.contact }}</span></a
+                >
               </li>
             </ul>
-            <span id="GIT">GET IN TOUCH</span>
+            <a href=""><span id="GIT" class="text-light">GET IN TOUCH</span></a>
           </div>
           <div
             v-for="title in titles"
@@ -65,7 +69,8 @@
                 v-for="link in links"
                 :key="link"
               >
-                <i class="fas fa-chevron-right"></i> {{ link }}
+                <i class="fas fa-chevron-right"></i
+                ><a class="text-light" href=""> {{ link }}</a>
               </li>
             </ul>
           </div>
@@ -87,10 +92,11 @@
         </div>
         <div class="col-4 text-center txt-silver">
           2020 NEXGEN is Proudly Powered by
-          <span class="txt-green">Codings</span>.
+          <a href=""><span class="txt-green">Codings</span></a
+          >.
         </div>
         <div class="col-1">
-          <a id="scrolltop" href="top"
+          <a id="scrolltop" @click="scrollTop"
             ><i class="fas fa-arrow-alt-circle-up fa-2x"></i
           ></a>
         </div>
@@ -149,11 +155,19 @@ export default {
       ],
     };
   },
+  methods: {
+    scrollTop() {
+      window.scrollTo(0, 0);
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
 @import "../scss/style.scss";
+a {
+  text-decoration: none;
+}
 .resetp {
   padding-right: 0;
   padding-left: 0;
@@ -184,5 +198,6 @@ li {
 }
 #scrolltop {
   color: grey;
+  cursor: pointer;
 }
 </style>

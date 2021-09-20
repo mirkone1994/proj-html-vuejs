@@ -75,7 +75,7 @@
             </p>
           </div>
           <div class="col-5 d-flex justify-content-end align-items-center">
-            <span id="SA">SEE ALL</span>
+            <span id="SA"><a class="text-light" href="">SEE ALL</a></span>
           </div>
         </div>
         <MainServicesCard />
@@ -231,6 +231,9 @@ export default {
 <style scoped lang="scss">
 @import "../scss/style.scss";
 //position
+a {
+  text-decoration: none;
+}
 .resetp {
   padding-right: 0;
   padding-left: 0;

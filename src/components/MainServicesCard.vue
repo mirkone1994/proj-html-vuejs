@@ -5,7 +5,7 @@
       :key="service.id"
       class="col-3 services-card"
     >
-      <i class="fas fa-arrow-right fs-4 txt-green"></i>
+      <a href=""><i class="fas fa-arrow-right fs-4 txt-green"></i></a>
       <i
         class="icon fs-5 mt-5 mb-4 px-3 rounded-circle txt-green bg-darkgreen"
         :class="service.img"
